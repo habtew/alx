@@ -36,31 +36,7 @@ int multiplyNumbers(int num1, int num2) {
         return 0;
     }
 
-    int result = 0;
-    int position = 1;
-
-    while (num2 > 0) {
-        int digit = num2 % 10;
-        int carry = 0;
-        num2 /= 10;
-
-        int tempNum1 = num1;
-        int tempPosition = position;
-
-        while (tempNum1 > 0 || carry > 0) {
-            int product = (tempNum1 % 10) * digit + carry;
-            carry = product / 10;
-            product %= 10;
-
-            result += product * tempPosition;
-            tempNum1 /= 10;
-            tempPosition *= 10;
-        }
-
-        position *= 10;
-    }
-
-    return result;
+    return num1 * num2;
 }
 
 int main(int argc, char *argv[]) {
