@@ -14,15 +14,29 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			char *x = va_arg(args, char *);
 
-			if (va_arg(args, char *) == NULL)
-				*x = "(nil)";
+			if (x == NULL)
+				printf("(nil)");
 
-			printf("%s", x);
+			else
+				printf("%s", x);
 			if (i + 1 != n)
 				printf("%s", separator);
 		}
 		printf("\n");
 	}
+	else
+	{
+		for (i = 0; i < n; i++)
+                {
+                        char *x = va_arg(args, char *);
 
+                        if (x == NULL)
+                                printf("(nil)");
+
+                        else
+                                printf("%s", x);
+                }
+                printf("\n");
+	}
 	va_end(args);
 }
