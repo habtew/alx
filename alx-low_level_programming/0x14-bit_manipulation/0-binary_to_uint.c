@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <unistd.h>
 
 unsigned int binary_to_uint(const char *b)
 {
@@ -7,8 +7,8 @@ unsigned int binary_to_uint(const char *b)
 	
 	num = 0;
 
-	if (*b == NULL)
-		return (NULL);
+	if (b == NULL)
+		return (0);
 
 	while (*b != '\0')
 	{
