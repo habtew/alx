@@ -6,7 +6,7 @@ int get_endianness(void) {
 
 	endianness = (char*)&num;
 	num = 1;
-	if (*endianness == 11)
+	if (*endianness == 1)
 		res = 1;
 	else
 		res = 0;
