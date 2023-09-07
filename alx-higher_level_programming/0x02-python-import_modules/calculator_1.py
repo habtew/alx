@@ -1,4 +1,3 @@
-guillaume@ubuntu:~/0x02$ cat calculator_1.py
 #!/usr/bin/python3
 def add(a, b):
     """My addition function
